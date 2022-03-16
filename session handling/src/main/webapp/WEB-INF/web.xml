@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>session handling</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>abc</servlet-name>
+  	<servlet-class>LogServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>abc</servlet-name>
+  	<url-pattern>/home</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>ab</servlet-name>
+  	<servlet-class>WelcomeServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>ab</servlet-name>
+  	<url-pattern>/welcome</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>a</servlet-name>
+  	<servlet-class>SignUpServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>a</servlet-name>
+  	<url-pattern>/adduser</url-pattern>
+  </servlet-mapping>
+    
+  <servlet>
+  	<servlet-name>a1</servlet-name>
+  	<servlet-class>dataStore.RequestAccept</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>a1</servlet-name>
+  	<url-pattern>/welcome/acceptrequest/*</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>a3</servlet-name>
+  	<servlet-class>dataStore.RequestSender</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>a3</servlet-name>
+  	<url-pattern>/welcome/sendrequest/*</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>a2</servlet-name>
+  	<servlet-class>dataStore.ChatHandler</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>a2</servlet-name>
+  	<url-pattern>/chat/*</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>a4</servlet-name>
+  	<servlet-class>dataStore.MessageSend</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>a4</servlet-name>
+  	<url-pattern>/chatsend</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>a5</servlet-name>
+  	<servlet-class>LogoutServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>a5</servlet-name>
+  	<url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+</web-app>
